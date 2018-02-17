@@ -6,7 +6,7 @@
  * Author: Code Parrots
  * Author URI: https://www.codeparrots.com
  * License: GPLv2 or later
- * Version: 1.0.0
+ * Version: 0.0.9
  */
 
 /*
@@ -39,7 +39,7 @@ define( 'WEBP_IMAGES_BASE', plugin_basename( __FILE__ ) );
 define( 'WEBP_IMAGES_URL', plugin_dir_url( __FILE__ ) );
 define( 'WEBP_IMAGES_PATH', plugin_dir_path( __FILE__ ) );
 define( 'WEBP_IMAGES_MIN_WP', '4.0' );
-define( 'WEBP_IMAGES_VERSION', '1.0.0' );
+define( 'WEBP_IMAGES_VERSION', '0.0.9' );
 
 /* loader */
 add_action( 'plugins_loaded', [ 'WebP_Images', 'instance' ] );
