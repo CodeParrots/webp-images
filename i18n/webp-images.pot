@@ -1,0 +1,171 @@
+# Copyright (c) 2018 Code Parrots. All Rights Reserved.
+msgid ""
+msgstr ""
+"Project-Id-Version: Webp Images 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/CodeParrots/webp-images/issues\n"
+"POT-Creation-Date: 2018-02-17 19:07:54+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"X-Generator: grunt-wp-i18n1.0.1\n"
+
+#: lib/classes/class-webp-images-media-fields.php:44
+msgid "Error:"
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:44
+msgid "We encountered a snag while generated your webpimage. Please try again."
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:87
+msgid "WebP URL"
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:95
+#. translators: 1. No webp images found error. 2. Generate .webp image link.
+msgid "No webp image found."
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:98
+msgid "Generate .webp"
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:117
+msgid "Exclude WebP Format"
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:128
+#. translators: 1. .webp wrapped in <code> tags
+msgid "Exclude this image from ever displaying in a %s format."
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:163
+msgid "WebP Savings"
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:186
+msgid "Cannot be converted to .webp format."
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:202
+msgid "Generate .wep Images"
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:213
+msgid "No associated .webp image found."
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:246
+msgid "Generate .webp Images"
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:262
+msgid "Regenerate .webp images"
+msgstr ""
+
+#: lib/classes/class-webp-images-settings.php:56
+#: lib/classes/class-webp-images-settings.php:57
+msgid "WebP Images"
+msgstr ""
+
+#: lib/classes/class-webp-images-settings.php:79
+msgid "WebP Images Settings"
+msgstr ""
+
+#: lib/classes/class-webp-images-settings.php:93
+msgid "Included Directories"
+msgstr ""
+
+#: lib/classes/class-webp-images-settings.php:99
+msgid "Default: <code>uploads</code>"
+msgstr ""
+
+#: lib/classes/class-webp-images-settings.php:102
+msgid ""
+"Assets in these directories will attempt deliver webp images. Enter the "
+"directories separated by"
+msgstr ""
+
+#: lib/classes/class-webp-images-settings.php:110
+msgid "Exclusions"
+msgstr ""
+
+#: lib/classes/class-webp-images-settings.php:116
+msgid "Default: <code>empty</code>"
+msgstr ""
+
+#: lib/classes/class-webp-images-settings.php:119
+msgid "Enter the exclusions (directories or extensions) separated by"
+msgstr ""
+
+#: lib/classes/class-webp-images-settings.php:127
+msgid "Compression Quality"
+msgstr ""
+
+#: lib/classes/class-webp-images-settings.php:133
+msgid "Default:"
+msgstr ""
+
+#: lib/classes/class-webp-images-settings.php:135
+msgid "Enter the compression quality."
+msgstr ""
+
+#: lib/classes/class-webp-images-settings.php:136
+msgid "100 being the heighest quality (largest file)."
+msgstr ""
+
+#: lib/classes/class-webp-images-settings.php:166
+#. translators:
+msgid ""
+"<strong>Alert:</strong> <code>cwebp</code> is not installed on this server, "
+"and is required to compress and serve images in webp format. Please see "
+"<b><a href=\"%1$s\" target=\"_blank\">%2$s</a></b> for installation "
+"instructions. If you are on a shared host, this will not be possible."
+msgstr ""
+
+#: lib/classes/class-webp-images-settings.php:168
+#: lib/classes/class-webp-images.php:46
+msgid "Downloading and Installing WebP"
+msgstr ""
+
+#: lib/classes/class-webp-images-settings.php:170
+msgid "<strong>Success:</strong> <code>cwep</code> %s is installed."
+msgstr ""
+
+#: lib/classes/class-webp-images.php:42
+msgid "cwebp is not installed. Please install the cwebp package. %s"
+msgstr ""
+
+#: lib/classes/class-webp-images.php:128
+msgid "Settings"
+msgstr ""
+
+#: lib/classes/class-webp-images.php:177
+msgid ""
+"CDN Enabler is optimized for WordPress 4.0. Please disable the plugin or "
+"upgrade your WordPress installation (recommended)."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Webp Images"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Convert uploaded images to webp format and conditionally serve them to "
+"supported browsers."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Code Parrots"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.codeparrots.com"
+msgstr ""

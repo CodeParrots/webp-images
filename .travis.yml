@@ -1,0 +1,51 @@
+sudo: false
+
+language: php
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+  slack:
+    secure: o8rpgg2PzHlJhcvZWKb1kewodt+wf2YECG5n3vJpwCymEuMWAAP2as6yGiAu4vg+es/ZcDw64H+j7J86NfADaKsfj4y0nIsGSp1/yMr5ER8L/BCxqQuMTmJjlSCrFxYeUCarHW+sB2WQ3FIheYnpgS8iKsFl6NG+pBLfS85ru+pwd0FEEFRegbrj0L3IKmLX9vpzmRVM4wghXOXHUxq0JoEcgNPl4Ia03jOvIyo87Qv50nabttncFSHM0mNWgG3xsaicTjgzAimHcBNCxDDV0BHKPWqbRygT6uORQZYOgeVMockjzZ28taIAtl54PRz9vIV+hWQGLVFeL9jZKW89D2FmHOjJ8rKWcv/Cpsnlew26kLd7OM3iefHzKemU942+nNPzJ1E0R0wT591wQFdGcbN+fT1Mp0UJ+WwGpY6g+YSWccimTnQODMW6CQxLmwT06o0vCIf397rFqWmwL9nY9XGj+vu2mXkIN9eeZA+Boq6JZmDhO09shpJXjCvCzB3oqHO1r/SYjdNfNGDYUtBbnadW5XMC7MqUSeT4LruaEWymFrtlgA5UvQzp/GHLr4wG2Yun6x/mVQglzZw6yl5CCLAg+Jvk2ffEr1HC0gyhZEUDfzf3IzFACW7YKJKJXmS7uUREHeSv3wf64OdKsN32Uu0wLUkYjfYY05oycjO63EQ=
+
+branches:
+  only:
+    - /^v\d.*$/
+    - master
+    - develop
+
+php:
+  - 5.6
+  - 7.1
+  - 7.2
+
+env:
+  - WP_VERSION=4.4 WP_MULTISITE=0
+  - WP_VERSION=latest WP_MULTISITE=0
+  - WP_VERSION=trunk WP_MULTISITE=0
+
+matrix:
+  fast_finish: true
+  exclude:
+    - php: 7.1
+      env: WP_VERSION=4.4 WP_MULTISITE=0
+    - php: 7.2
+      env: WP_VERSION=4.4 WP_MULTISITE=0
+
+install:
+  - export DEV_LIB_PATH=bin/dev-lib
+  - if [ ! -e "$DEV_LIB_PATH" ] && [ -L .travis.yml ]; then export DEV_LIB_PATH=$( dirname $( readlink .travis.yml ) ); fi
+  - if [ ! -e "$DEV_LIB_PATH" ]; then git clone https://github.com/xwp/wp-dev-lib.git $DEV_LIB_PATH; fi
+  - source $DEV_LIB_PATH/travis.install.sh
+
+script:
+  - source $DEV_LIB_PATH/travis.script.sh
+
+after_script:
+  - source $DEV_LIB_PATH/travis.after_script.sh
+
+before_deploy:
+  - npm install
+  # Build the plugin for deployment
+  - grunt 'Build the plugin.'
