@@ -1,7 +1,7 @@
 {
 	"name": "webp-images",
 	"title": "WebP Images",
-	"version": "0.0.9",
+	"version": "1.0.0",
 	"description": "Generate and conditionally serve .webp images to supported browsers.",
 	"main": "index.js",
 	"scripts": {
