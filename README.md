@@ -33,7 +33,7 @@ Anytime an image is uploaded through the media library a related .webp image is 
 
 On the front end of your site, if a `.webp` format is available for the media element than the `.webp` format will be served. If not, or if a browser doesn't support `.webp` formats - then the original image will be served to the browser.
 
-[![Build Status](https://travis-ci.org/CodeParrots/webp-images.svg?branch=master)](https://travis-ci.org/CodeParrots/webp-images) [![License](https://img.shields.io/badge/license-GPL--2.0-brightgreen.svg)](https://github.com/CodeParrots/webp-images/blob/master/license.txt) [![PHP 5.6](https://img.shields.io/badge/php-5.6-8892bf.svg)](https://secure.php.net/supported-versions.php) [![WordPress plugin](https://img.shields.io/WordPress/plugin/v/webp-images.svg)](https://WordPress.org/plugins/webp-images/) [![WordPress](https://img.shields.io/WordPress/v/webp-images.svg)](https://img.shields.io/WordPress/v/webp-images.svg) [![WordPress](https://img.shields.io/WordPress/plugin/dt/webp-images.svg)](https://WordPress.org/plugins/webp-images/)  
+[![Build Status](https://travis-ci.org/CodeParrots/webp-images.svg?branch=master)](https://travis-ci.org/CodeParrots/webp-images) [![License](https://img.shields.io/badge/license-GPL--2.0-brightgreen.svg)](https://github.com/CodeParrots/webp-images/blob/master/license.txt) [![PHP 5.6](https://img.shields.io/badge/php-5.6-8892bf.svg)](https://secure.php.net/supported-versions.php)  
 
 ## Description ##
 

@@ -49,3 +49,17 @@ before_deploy:
   - npm install
   # Build the plugin for deployment
   - grunt 'Build the plugin.'
+
+deploy:
+  provider: releases
+  api_key:
+    secure: fZ0Z0wCCAiXbzGs3ysbcAxcjBxHchfgwP/UMzTFVeDC8odVvJj6hzH8ZqVhZbNUqvnOmSUhWdKKP7fn43ZSU9xHxIqYbEt8O7lIap4OOM2p42IjpqPLBT+D8cx67ss6sYuwAXSSIi2ydyHT1MQMxWchFLb4EAsuTsf3CNZdckykZ5bryDCJYWv2FENJ0IVwryxnTn35VHzv6Z1KcRlfJ0yXJ6pZeN4Ty6FV5sEdmD5sQ76RSliRgL6LXalaEU0Nl+pPAsn4zOekPWtNIpT/1WLnIg8TgRq/0wHzwKj1oATvaFTrGWQNwPZXb0nNSVIc5+kYGxKAhRwO3//UGNkTbjSdA9pqjh9WTHbRO/Z6016rBBYlaM+YcIuy67hyyiFfUeaxp5FwS8F0NmTDZDcOkSD5loC0U/N+e8HR0lGsp+0MgHfVeWyttWqG2P+lNRQpN2rSsd9z6znf9/O10EdcaTilbQXMGCgCP9adgBblPejCCeRFlX/IPANh/Pno5xvQH8iRD0W0eT4t/QACrLQyR8eLuTW1Lr+5QEZfddJHDLzkrYzmpGf4PgChGi4igipoEqKq/Cdz3Zy/duPB/fT6WFKwXFHD/fA5xemquGtLEvVxb2J2E/HXuBIfXWQMyl+4NolQi8uis8kUcNmeYsPJ/Kgsav6VO4n59QAQDbVQo2XM=
+  file_glob: true
+  file: build/webp-images-*.zip
+  on:
+    tags: true
+    repo: CodeParrots/webp-images
+    php: '7.2'
+    condition: "$WP_VERSION=trunk"
+  skip_cleanup: true
+  overwrite: true
