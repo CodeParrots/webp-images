@@ -11,7 +11,9 @@ Bye-bye third party services - automate the conversion of images in your media l
 
 == Description ==
 
-<strong>Note:</strong> `cwebp` must be installed on the server and readily available in the system `$PATH`, for this plugin to function correctly. This is not available on shared hosting.
+<strong>Important:</strong> `cwebp` must be installed on the server and readily available in the system `$PATH`, for this plugin to function correctly. This is not available on shared hosting.
+
+<strong>Note:</strong> Not an ideal solution for shared hosting as webp will not be installed. In this case, you may want to take a look at third party services.
 
 *cwebp Installation*
 
