@@ -2,7 +2,7 @@
 ![Banner Image](github-assets/banner-1550x500.jpg)
 
 **Contributors:** [codeparrots](https://profiles.wordpress.org/codeparrots), [eherman24](https://profiles.wordpress.org/eherman24)  
-**Tags:** [c[webp](https://WordPress.org/plugins/tags/webp/)](https://WordPress.org/plugins/tags/cwebp/), webp, [image](https://WordPress.org/plugins/tags/image/), [compression](https://WordPress.org/plugins/tags/compression/)  
+**Tags:** [webp](https://WordPress.org/plugins/tags/webp/), [image](https://WordPress.org/plugins/tags/image/), [compression](https://WordPress.org/plugins/tags/compression/), [automation](https://WordPress.org/plugins/tags/automation/), [media-library](https://WordPress.org/plugins/tags/media-library/), [conditional](https://WordPress.org/plugins/tags/conditional/), [browser](https://WordPress.org/plugins/tags/browser/), [support](https://WordPress.org/plugins/tags/support/)  
 **Requires at least:** 4.0  
 **Tested up to:** 4.9  
 **Stable tag:** 0.0.9  

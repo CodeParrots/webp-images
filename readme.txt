@@ -1,6 +1,6 @@
 === WebP Images ===
 Contributors: codeparrots, eherman24
-Tags: cwebp, webp, image, compression
+Tags: webp, image, compression, automation, media-library, conditional, browser, support
 Requires at least: 4.0
 Tested up to: 4.9
 Stable tag: 0.0.9
