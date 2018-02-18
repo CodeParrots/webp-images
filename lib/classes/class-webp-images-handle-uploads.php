@@ -77,8 +77,11 @@ class WebP_Images_Handle_Uploads {
 
 		$this->upload_paths = new WebP_Images_Upload_Paths( $this->attachment_meta['file'] );
 
+		// PHP 5.6 fix
+		$upload_path = $this->upload_paths;
+
 		// Make webp directory
-		if ( wp_mkdir_p( $this->upload_paths::$webp_file_path ) ) {
+		if ( wp_mkdir_p( $upload_path::$webp_file_path ) ) {
 
 			// Flush rewrite rules so the webp dir is accessible
 			flush_rewrite_rules();
@@ -120,8 +123,10 @@ class WebP_Images_Handle_Uploads {
 
 		}
 
-		$input  = untrailingslashit( $this->upload_paths::$base_dir ) . $this->upload_paths::$sub_dir . $file;
-		$output = untrailingslashit( $this->upload_paths::$webp_dir_path ) . $this->upload_paths::$sub_dir . str_replace( pathinfo( $file, PATHINFO_EXTENSION ), 'webp', $file );
+		$upload_paths = $this->upload_paths;
+
+		$input  = untrailingslashit( $upload_paths::$base_dir ) . $upload_paths::$sub_dir . $file;
+		$output = untrailingslashit( $upload_paths::$webp_dir_path ) . $upload_paths::$sub_dir . str_replace( pathinfo( $file, PATHINFO_EXTENSION ), 'webp', $file );
 
 		shell_exec( "cwebp -q {$this->webp_options['quality']} {$input} -o {$output}" );
 
@@ -144,7 +149,9 @@ class WebP_Images_Handle_Uploads {
 
 		}
 
-		$webp_file_path = $this->upload_paths::$webp_dir_path . $this->upload_paths::$webp_file_sub_dir . str_replace( pathinfo( $file, PATHINFO_EXTENSION ), 'webp', $file );
+		$upload_paths = $this->upload_paths;
+
+		$webp_file_path = $upload_paths::$webp_dir_path . $upload_paths::$webp_file_sub_dir . str_replace( pathinfo( $file, PATHINFO_EXTENSION ), 'webp', $file );
 
 		if ( ! file_exists( $webp_file_path ) ) {
 
