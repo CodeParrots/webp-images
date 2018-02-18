@@ -196,14 +196,14 @@ module.exports = function(grunt) {
 					// Banner
 					if ( grunt.file.exists( 'github-assets/banner-1550x500.jpg' ) ) {
 
-						readme = readme.replace( '**Contributors:**', "![Banner Image](github-assets/banner-1550x500.jpg)\r\n\r\n**Contributors:**" );
+						readme = readme.replace( '**Contributors:**', '![Banner Image](github-assets/banner-1550x500.jpg)\r\n\r\n**Contributors:**' );
 
 					}
 
 					// Screenshots
 					if ( grunt.file.exists( 'github-assets/screenshot-1.png' ) ) {
 
-						readme = readme.replace( '## Install Instructions ##', "## Screenshots ##\r\n\r\n![Screenshot 1](github-assets/screenshot-1.png)\r\n\r\n## Install Instructions ##" );
+						readme = readme.replace( '## Install Instructions ##', '## Screenshots ##\r\n\r\n![Screenshot 1](github-assets/screenshot-1.png)\r\n\r\n## Install Instructions ##' );
 
 					}
 
