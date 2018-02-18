@@ -39,6 +39,10 @@ Example: `wp-content/uploads/webp/`
 
 On the front end of your site, if a `.webp` format is available for the media element than the `.webp` format will be served. If not, or if a browser doesn't support `.webp` formats - then the original image will be served to the browser.
 
+## Screenshots ##
+
+![Screenshot 1](github-assets/screenshot-1.png)
+
 ## Install Instructions ##
 
 1. Install cwebp - https://developers.google.com/speed/webp/docs/cwebp

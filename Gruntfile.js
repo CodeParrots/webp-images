@@ -200,6 +200,13 @@ module.exports = function(grunt) {
 
 					}
 
+					// Screenshots
+					if ( grunt.file.exists( 'github-assets/screenshot-1.png' ) ) {
+
+						readme = readme.replace( '## Install Instructions ##', "## Screenshots ##\r\n\r\n![Screenshot 1](github-assets/screenshot-1.png)\r\n\r\n## Install Instructions ##" );
+
+					}
+
 					// Tag links
 					readme = readme.replace( matches[0], section );
 
