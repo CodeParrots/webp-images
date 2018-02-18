@@ -76,7 +76,7 @@ class WebP_Images_Settings {
 
 		<div class="wrap">
 
-			<h2><?php esc_html_e( 'WebP Images Settings', 'cdn-enabler' ); ?></h2>
+			<h2><?php esc_html_e( 'WebP Images Settings', 'webp-images' ); ?></h2>
 
 			<?php self::generate_notice(); ?>
 
@@ -99,7 +99,7 @@ class WebP_Images_Settings {
 									<?php esc_html_e( 'Default: <code>uploads</code>', 'webp-images' ); ?>
 								</label>
 								<p class="description">
-									<?php esc_html_e( 'Assets in these directories will attempt deliver webp images. Enter the directories separated by', 'webp-images'); ?> <code>,</code>.
+									<?php esc_html_e( 'Assets in these directories will attempt deliver webp images. Enter the directories separated by', 'webp-images' ); ?> <code>,</code>.
 								</p>
 							</fieldset>
 						</td>
@@ -116,7 +116,7 @@ class WebP_Images_Settings {
 									<?php esc_html_e( 'Default: <code>empty</code>', 'webp-images' ); ?>
 								</label>
 									<p class="description">
-										<?php esc_html_e( 'Enter the exclusions (directories or extensions) separated by', 'webp-images'); ?> <code>,</code>.
+										<?php esc_html_e( 'Enter the exclusions (directories or extensions) separated by', 'webp-images' ); ?> <code>,</code>.
 									</p>
 							</fieldset>
 						</td>
@@ -130,7 +130,7 @@ class WebP_Images_Settings {
 							<fieldset>
 								<label for="webp_images_excludes">
 									<input type="number" min="10" max="100" name="webp_images[quality]" id="webp_images_quality" value="<?php echo esc_attr( $options['quality'] ); ?>" />
-									<?php esc_html_e( 'Default:', 'webp-images'); ?> <code>80</code>
+									<?php esc_html_e( 'Default:', 'webp-images' ); ?> <code>80</code>
 								</label>
 								<p class="description"><?php esc_html_e( 'Enter the compression quality.', 'webp-images' ); ?> <code>10 - 100</code></p>
 								<p class="description"><?php esc_html_e( '100 being the heighest quality (largest file).', 'webp-images' ); ?></p>
@@ -167,6 +167,7 @@ class WebP_Images_Settings {
 			'https://developers.google.com/speed/webp/download',
 			__( 'Downloading and Installing WebP', 'webp-images' )
 		) : sprintf(
+			/* translators: 1. Current cwebp version installed. */
 			__( '<strong>Success:</strong> <code>cwep</code> %s is installed.', 'webp-images' ),
 			WebP_Images::$cwebp_version
 		);

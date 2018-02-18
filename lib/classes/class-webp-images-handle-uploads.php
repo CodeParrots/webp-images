@@ -71,35 +71,6 @@ class WebP_Images_Handle_Uploads {
 	}
 
 	/**
-	 * Delete a single webp image out of the wp-content/uploads/webp dir
-	 *
-	 * @since 1.0.0
-	 *
-	 * @param  string $file File name to delete.
-	 *
-	 * @return null
-	 */
-	private function delete_webp_image( $file ) {
-
-		if ( ! $file ) {
-
-			return;
-
-		}
-
-		$webp_file_path = $this->upload_paths::$webp_dir_path . $this->upload_paths::$webp_file_sub_dir . str_replace( pathinfo( $file, PATHINFO_EXTENSION ), 'webp', $file );
-
-		if ( ! file_exists( $webp_file_path ) ) {
-
-			return;
-
-		}
-
-		unlink( $webp_file_path );
-
-	}
-
-	/**
 	 * Generate the duplicate webp images into the wp-content/uploads/webp/ dir.
 	 */
 	public function generate_webp_images() {
@@ -116,6 +87,13 @@ class WebP_Images_Handle_Uploads {
 
 		// Generate the full size webp image
 		$this->generate_webp_image( basename( $this->attachment_meta['file'] ) );
+
+		// Sizes array is not set when we regenerate a specified image size in regenerate_webp_image_size()
+		if ( ! isset( $this->attachment_meta['sizes'] ) || empty( $this->attachment_meta['sizes'] ) ) {
+
+			return;
+
+		}
 
 		foreach ( $this->attachment_meta['sizes'] as $size => $image_meta ) {
 
@@ -146,6 +124,35 @@ class WebP_Images_Handle_Uploads {
 		$output = untrailingslashit( $this->upload_paths::$webp_dir_path ) . $this->upload_paths::$sub_dir . str_replace( pathinfo( $file, PATHINFO_EXTENSION ), 'webp', $file );
 
 		shell_exec( "cwebp -q {$this->webp_options['quality']} {$input} -o {$output}" );
+
+	}
+
+	/**
+	 * Delete a single webp image out of the wp-content/uploads/webp dir
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param  string $file File name to delete.
+	 *
+	 * @return null
+	 */
+	private function delete_webp_image( $file ) {
+
+		if ( ! $file ) {
+
+			return;
+
+		}
+
+		$webp_file_path = $this->upload_paths::$webp_dir_path . $this->upload_paths::$webp_file_sub_dir . str_replace( pathinfo( $file, PATHINFO_EXTENSION ), 'webp', $file );
+
+		if ( ! file_exists( $webp_file_path ) ) {
+
+			return;
+
+		}
+
+		unlink( $webp_file_path );
 
 	}
 

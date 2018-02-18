@@ -60,8 +60,8 @@ class WebP_Images_Rewriter {
 	*/
 	protected function exclude_asset( $asset ) {
 
-		$assets_split = explode( ', ', $asset );
-		$original_url = isset( $assets_split[0] ) ? strtok( $assets_split[0], ' ' ) : false;
+		$assets_split  = explode( ', ', $asset );
+		$original_url  = isset( $assets_split[0] ) ? strtok( $assets_split[0], ' ' ) : false;
 		$attachment_id = $this->get_attachment_id( $original_url );
 
 		if ( ! $attachment_id || ! wp_attachment_is_image( $attachment_id ) ) {
@@ -217,7 +217,7 @@ class WebP_Images_Rewriter {
 
 		global $wpdb;
 
-		$attachment = $wpdb->get_col( $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_url ) );
+		$attachment = $wpdb->get_col( $wpdb->prepare( "SELECT ID FROM $wpdb->posts WHERE guid=%s;", $image_url ) );
 
 		return isset( $attachment[0] ) ? $attachment[0] : false;
 
