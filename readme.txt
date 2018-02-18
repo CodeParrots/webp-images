@@ -43,6 +43,14 @@ On the front end of your site, if a `.webp` format is available for the media el
 
 == Changelog ==
 
+= 1.1.0 - February 18th, 2018 =
+
+* Removed the `wp_die()` statement when `cwebp` is not installed. Plugin should still work remotely, without the image compression attempts, allowing users to use this locally and upload it to a remote site.
+* Reworked the compression listings on the media element table.
+* Updated the JavaScript
+* Added stylesheet
+* Updated build process
+
 = 1.0.0 - February 17, 2018 =
 
 * Initial Release.
