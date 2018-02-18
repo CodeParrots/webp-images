@@ -5,7 +5,7 @@
 **Tags:** [webp](https://WordPress.org/plugins/tags/webp/), [image](https://WordPress.org/plugins/tags/image/), [compression](https://WordPress.org/plugins/tags/compression/), [automation](https://WordPress.org/plugins/tags/automation/), [media-library](https://WordPress.org/plugins/tags/media-library/), [conditional](https://WordPress.org/plugins/tags/conditional/), [browser](https://WordPress.org/plugins/tags/browser/), [support](https://WordPress.org/plugins/tags/support/)  
 **Requires at least:** 4.0  
 **Tested up to:** 4.9  
-**Stable tag:** 1.0.0  
+**Stable tag:** 1.1.0  
 **License:** GPLv2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
 
