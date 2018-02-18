@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Webp Images 1.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/CodeParrots/webp-images/issues\n"
-"POT-Creation-Date: 2018-02-18 12:41:44+00:00\n"
+"POT-Creation-Date: 2018-02-18 17:59:12+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -63,22 +63,22 @@ msgid "Cannot be converted to .webp format."
 msgstr ""
 
 #: build/webp-images/lib/classes/class-webp-images-media-fields.php:202
-#: lib/classes/class-webp-images-media-fields.php:215
+#: lib/classes/class-webp-images-media-fields.php:214
 msgid "Generate .wep Images"
 msgstr ""
 
 #: build/webp-images/lib/classes/class-webp-images-media-fields.php:213
-#: lib/classes/class-webp-images-media-fields.php:226
+#: lib/classes/class-webp-images-media-fields.php:227
 msgid "No associated .webp image found."
 msgstr ""
 
 #: build/webp-images/lib/classes/class-webp-images-media-fields.php:246
-#: lib/classes/class-webp-images-media-fields.php:259
+#: lib/classes/class-webp-images-media-fields.php:254
 msgid "Generate .webp Images"
 msgstr ""
 
 #: build/webp-images/lib/classes/class-webp-images-media-fields.php:262
-#: lib/classes/class-webp-images-media-fields.php:275
+#: lib/classes/class-webp-images-media-fields.php:596
 msgid "Regenerate .webp images"
 msgstr ""
 
@@ -163,7 +163,8 @@ msgid "Downloading and Installing WebP"
 msgstr ""
 
 #: build/webp-images/lib/classes/class-webp-images-settings.php:170
-#: lib/classes/class-webp-images-settings.php:170
+#: lib/classes/class-webp-images-settings.php:171
+#. translators: 1. Current cwebp version installed.
 msgid "<strong>Success:</strong> <code>cwep</code> %s is installed."
 msgstr ""
 
@@ -172,7 +173,7 @@ msgid "cwebp is not installed. Please install the cwebp package. %s"
 msgstr ""
 
 #: build/webp-images/lib/classes/class-webp-images.php:128
-#: lib/classes/class-webp-images.php:114
+#: lib/classes/class-webp-images.php:113
 msgid "Settings"
 msgstr ""
 
@@ -182,7 +183,102 @@ msgid ""
 "upgrade your WordPress installation (recommended)."
 msgstr ""
 
-#: lib/classes/class-webp-images.php:162
+#: lib/classes/class-webp-images-ajax-handler.php:29
+msgid "Error: Missing attachment ID."
+msgstr ""
+
+#: lib/classes/class-webp-images-ajax-handler.php:29
+msgid "Error: Attachment is not an image."
+msgstr ""
+
+#: lib/classes/class-webp-images-ajax-handler.php:73
+msgid "Missing attachment ID."
+msgstr ""
+
+#: lib/classes/class-webp-images-ajax-handler.php:73
+msgid "Missing image size."
+msgstr ""
+
+#: lib/classes/class-webp-images-ajax-handler.php:85
+#. translators: 1. Image size.
+msgid "Image size '%s' not found."
+msgstr ""
+
+#: lib/classes/class-webp-images-ajax-handler.php:104
+#. translators: 1. Image size.
+msgid "Error generating a .webp file for image size '%s'."
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:370
+msgid "Error retreiving attachment metadata."
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:439
+#: lib/classes/class-webp-images-media-fields.php:516
+msgid "The original file could not be found."
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:439
+#: lib/classes/class-webp-images-media-fields.php:516
+msgid "The webp file could not be found."
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:451
+#: lib/classes/class-webp-images-media-fields.php:562
+#. translators: 1. Percent saved.
+msgid "Percent Saved: %1$s"
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:459
+#: lib/classes/class-webp-images-media-fields.php:567
+#. translators: 1. Space saved. ie 123kb
+msgid "Space Saved: %1$s"
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:485
+#. translators: 1. Number of compressed images.
+msgid "%1$s size compressed"
+msgid_plural "%1$s sizes compressed"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/classes/class-webp-images-media-fields.php:503
+#. translators: 1. Percent saved 2. KB saved
+msgid "Reduced by %1$s (%2$s)"
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:556
+msgid "View webp for this image size."
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:582
+msgid "Regenerate All"
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:584
+#. translators: Number of missing webp images.
+msgid "Generate %1$s missing image"
+msgid_plural "Generate %1$s missing images"
+msgstr[0] ""
+msgstr[1] ""
+
+#: lib/classes/class-webp-images-media-fields.php:597
+msgid "View .webp image"
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:597
+msgid "View"
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:598
+msgid "Delete .webp images"
+msgstr ""
+
+#: lib/classes/class-webp-images-media-fields.php:598
+msgid "Delete"
+msgstr ""
+
+#: lib/classes/class-webp-images.php:161
 msgid ""
 "The WebP Images plugin is optimized for WordPress 4.0 and later. Please "
 "disable the plugin or upgrade your WordPress installation (recommended)."
