@@ -19,6 +19,39 @@ module.exports = function(grunt) {
 			gruntfile: [ 'Gruntfile.js' ]
 		},
 
+		autoprefixer: {
+			options: {
+				browsers: [
+					'Android >= 2.1',
+					'Chrome >= 21',
+					'Edge >= 12',
+					'Explorer >= 7',
+					'Firefox >= 17',
+					'Opera >= 12.1',
+					'Safari >= 6.0'
+				],
+				cascade: false
+			},
+			main: {
+				src: [ 'lib/css/**/*.css', '!lib/css/**/*.min.cs' ]
+			}
+		},
+
+		cssmin: {
+			options: {
+				processImport: false,
+				roundingPrecision: 5,
+				shorthandCompacting: false
+			},
+			assets: {
+				expand: true,
+				cwd: 'lib/assets/css/',
+				src: [ '**/*.css', '!**/*.min.css' ],
+				dest: 'lib/assets/css/',
+				ext: '.min.css'
+			}
+		},
+
 		uglify: {
 			options: {
 				ASCIIOnly: true
@@ -33,6 +66,10 @@ module.exports = function(grunt) {
 		},
 
 		watch: {
+			css: {
+				files: [ 'lib/assets/css/**/*.js', '!lib/assets/css/**/*.min.js' ],
+				tasks: [ 'autoprefix', 'cssmin' ]
+			},
 			js: {
 				files: [ 'lib/assets/js/**/*.js', '!lib/assets/js/**/*.min.js' ],
 				tasks: [ 'jshint', 'uglify' ]
@@ -159,7 +196,14 @@ module.exports = function(grunt) {
 					// Banner
 					if ( grunt.file.exists( 'github-assets/banner-1550x500.jpg' ) ) {
 
-						readme = readme.replace( '**Contributors:**', "![Banner Image](github-assets/banner-1550x500.jpg)\r\n\r\n**Contributors:**" );
+						readme = readme.replace( '**Contributors:**', '![Banner Image](github-assets/banner-1550x500.jpg)\r\n\r\n**Contributors:**' );
+
+					}
+
+					// Screenshots
+					if ( grunt.file.exists( 'github-assets/screenshot-1.png' ) ) {
+
+						readme = readme.replace( '## Install Instructions ##', '## Screenshots ##\r\n\r\n![Screenshot 1](github-assets/screenshot-1.png)\r\n\r\n## Install Instructions ##' );
 
 					}
 
@@ -188,6 +232,8 @@ module.exports = function(grunt) {
 	] );
 
 	grunt.registerTask( 'Development tasks.', [
+		'autoprefixer',
+		'cssmin',
 		'replace',
 		'jshint',
 		'uglify',

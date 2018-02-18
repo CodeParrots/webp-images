@@ -32,22 +32,7 @@ class WebP_Images {
 		// Load the AJAX handler
 		new WebP_Images_AJAX_Handler();
 
-		// self::$cwebp_is_installed = strpos( shell_exec( "22 -version 2>&1" ), 'sh: 22' ) === false;
-		self::$cwebp_is_installed = strpos( shell_exec( "cwebp -version 2>&1" ), 'sh: cwebp' ) === false;
-
-		if ( ! self::$cwebp_is_installed ) {
-
-			// Setup an admin notice, not a die statement.
-			wp_die( sprintf(
-				__( 'cwebp is not installed. Please install the cwebp package. %s', 'webp-images' ),
-				sprintf(
-					'<a href="%1$s" target="_blank" title="%2$s">%2$s</a>',
-					esc_url( 'https://developers.google.com/speed/webp/download' ),
-					esc_html__( 'Downloading and Installing WebP', 'webp-images' )
-				)
-			) );
-
-		}
+		self::$cwebp_is_installed = strpos( shell_exec( 'cwebp -version 2>&1' ), 'sh: cwebp' ) === false;
 
 		new WebP_Images_Media_Fields();
 
@@ -75,8 +60,8 @@ class WebP_Images {
 		// Generate the webp images
 		add_filter( 'wp_generate_attachment_metadata', function( $metadata, $attachment_id ) {
 
-			// Only resize images.
-			if ( ! wp_attachment_is_image( $attachment_id ) ) {
+			// Only resize images when cwebp is installed.
+			if ( ! self::$cwebp_is_installed || ! wp_attachment_is_image( $attachment_id ) ) {
 
 				return $metadata;
 
@@ -173,9 +158,7 @@ class WebP_Images {
 		?>
 
 		<div class="notice notice-error">
-
-			<p><?php esc_html_e( 'CDN Enabler is optimized for WordPress 4.0. Please disable the plugin or upgrade your WordPress installation (recommended).', 'cdn-enabler' ); ?><p>
-
+			<p><?php esc_html_e( 'The WebP Images plugin is optimized for WordPress 4.0 and later. Please disable the plugin or upgrade your WordPress installation (recommended).', 'webp-images' ); ?><p>
 		</div>
 
 		<?php

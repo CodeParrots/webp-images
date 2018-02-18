@@ -39,6 +39,10 @@ Example: `wp-content/uploads/webp/`
 
 On the front end of your site, if a `.webp` format is available for the media element than the `.webp` format will be served. If not, or if a browser doesn't support `.webp` formats - then the original image will be served to the browser.
 
+## Screenshots ##
+
+![Screenshot 1](github-assets/screenshot-1.png)
+
 ## Install Instructions ##
 
 1. Install cwebp - https://developers.google.com/speed/webp/docs/cwebp
@@ -46,6 +50,15 @@ On the front end of your site, if a `.webp` format is available for the media el
 3. If supported, the `.webp` image will be served to the browser, otherwise the original will be referenced.
 
 ## Changelog ##
+
+### 1.1.0 - February 18th, 2018 ###
+
+* New: Added stylesheet.
+* Update: Removed the `wp_die()` statement when `cwebp` is not installed. Plugin should still work remotely, without the image compression attempts, allowing users to use this locally and upload it to a remote site.
+* Update: Updated build process.
+* Update: Update .pot file.
+* Update: Reworked the compression listings on the media element table.
+* Update: Updated the JavaScript.
 
 ### 1.0.0 - February 17, 2018 ###
 
